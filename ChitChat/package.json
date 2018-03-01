@@ -1,0 +1,53 @@
+{
+  "name": "part1",
+  "version": "1.0.0",
+  "description": "",
+  "main": "src/app.js",
+  "scripts": {
+    "start": "webpack-dev-server --config ./webpack.config.js --inline --history-api-fallback",
+    "package": "webpack",
+    "test": "jest --config jest.config.js"
+  },
+  "author": "Edda Steinunn, Darri Valgardsson, Sigurdur Sturla",
+  "license": "ISC",
+  "devDependencies": {
+    "babel-core": "^6.26.0",
+    "babel-eslint": "^8.2.1",
+    "babel-loader": "^7.1.2",
+    "babel-preset-env": "^1.6.1",
+    "babel-preset-es2015": "^6.24.1",
+    "babel-preset-react": "^6.24.1",
+    "css-loader": "^0.28.9",
+    "enzyme": "^3.3.0",
+    "enzyme-adapter-react-16": "^1.1.1",
+    "eslint": "^4.16.0",
+    "eslint-loader": "^1.9.0",
+    "eslint-plugin-react": "^7.6.1",
+    "html-webpack-plugin": "^2.30.1",
+    "jest": "^22.1.4",
+    "less": "^2.7.3",
+    "less-loader": "^4.0.5",
+    "path": "^0.12.7",
+    "react-fake-props": "^0.2.0",
+    "react-svg-loader": "^2.1.0",
+    "style-loader": "^0.20.1",
+    "webpack": "^3.10.0",
+    "webpack-dev-server": "^2.11.1"
+  },
+  "dependencies": {
+    "express": "4.16.2",
+    "font-awesome": "^4.7.0",
+    "mock-socket": "^7.1.0",
+    "prop-types": "^15.6.0",
+    "react": "^16.2.0",
+    "react-dom": "^16.2.0",
+    "react-favicon": "0.0.13",
+    "react-fontawesome": "^1.6.1",
+    "react-modal": "^3.1.13",
+    "react-router": "^4.2.0",
+    "react-router-dom": "^4.2.2",
+    "react-scripts": "1.0.17",
+    "socket.io": "2.0.3",
+    "socket.io-client": "^1.7.2"
+  }
+}

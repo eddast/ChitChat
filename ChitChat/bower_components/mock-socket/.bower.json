@@ -1,0 +1,15 @@
+{
+  "name": "mock-socket",
+  "homepage": "https://github.com/thoov/mock-socket",
+  "version": "7.1.0",
+  "_release": "7.1.0",
+  "_resolution": {
+    "type": "version",
+    "tag": "7.1.0",
+    "commit": "dca9ea6081096b476230bcb2886a8280ad3ac827"
+  },
+  "_source": "https://github.com/thoov/mock-socket.git",
+  "_target": "^7.1.0",
+  "_originalSource": "mock-socket",
+  "_direct": true
+}

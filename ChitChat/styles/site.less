@@ -1,0 +1,743 @@
+body {
+    background-color: #76F196;
+    width : 100%;
+    height : 100%;
+    overflow: hidden;
+
+        .bannerDiv {
+
+        margin: 0;
+        min-width: 100%;
+        padding: 2px;
+        background-color: #25323A;
+
+        .centerHeading {
+            display: flex;
+            align-items: center;
+            vertical-align: middle;
+        }
+
+        #bannerImg {
+            margin-left: 20px;
+            margin-top: 10px;
+        }
+        
+        #bannerTitle {
+            margin-left: 25px;
+            font-family: Helvetica, sans-serif;
+            font-weight: bold;
+            font-size: 40px;
+            color: white;
+            margin-left: 25px;
+            text-shadow: 2px 2px 4px #76f197a9;
+        }
+
+        #bannerTagline {
+            font-family: Brush Script MT, Courier New, Courier, monospace;
+            color: white;
+            font-size: 26px;
+            margin-left:170px;
+            margin-top:-20px;
+            padding-bottom: 5px;
+            color: #76F196;
+        }
+    }
+
+    .initialPageBody {
+        position:relative;
+        min-height: 100%;
+        min-width: 100%;
+        left: 0;
+        top: 0;
+        margin: 0 auto;
+        margin-top: 50px;
+    }
+
+    .nicknameInput {
+        text-align: center;
+        margin: 0 auto;
+
+        .nicknamePrompt {
+            font-family: Helvetica, sans-serif;
+            align-content: center;
+            font-weight: bold;
+            font-size: 40px;
+            color: white;
+            display: block;
+            margin: auto;
+            text-shadow: 2px 2px 4px #444040;
+            margin-bottom: 40px;
+        }
+
+        .nicknameInputTextField {
+            border-radius: 20px;
+            font-family: Helvetica, sans-serif;
+            align-content: center;
+            font-size: 22px;
+            color: #25323A;
+            border: 5px, solid, #6956e273;
+            border-color:#6956e273;
+            padding: 10px;
+            margin-bottom: 30px;
+        }
+
+        .nicknameInputTextField:focus {
+            border: 3px solid rgba(105, 86, 226, 0.589);
+            box-shadow: #6956e2b9;
+            -webkit-transition: 0.4s all;
+            transition: 0.4s all;
+        }
+
+        .nicknameInputButton {
+            font-family: Helvetica, sans-serif;
+            align-content: center;
+            font-weight: bold;
+            font-size: 14px;
+            color: white;
+            padding: 15px 50px 15px 50px;
+            background: #6856E2;
+            text-shadow: 2px 2px 4px #6e6969;
+            border : 1.5px;
+            border-radius: 20px;
+            transition: all 0.3s;
+            box-shadow: 1px 2px 2px 2px rgba(37, 50, 58, 0.651)
+        }
+
+        .nicknameButtonDiv::before {
+            content: '';
+            position: absolute;
+            bottom: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            z-index: 1;
+            opacity: 0;
+            transition: all 0.3s;
+            border-top-width: 1px;
+            border-bottom-width: 1px;
+            border-top-style: solid;
+            border-bottom-style: solid;
+            border-top-color: rgba(255, 255, 255, 0);
+            border-bottom-color: rgba(255, 255, 255, 0);
+            transform: scale(0.1, 1);
+        }
+
+        .nicknameInputButton:hover {
+            letter-spacing: 2px;
+        }
+
+        .nicknameButtonDiv:hover::before {
+            opacity: 5; 
+            transform: scale(1, 1); 
+        }
+        .nicknameButtonDiv::after {
+            content: '';
+            position: absolute;
+            bottom: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            z-index: 1;
+            transition: all 0.3s;
+            background-color: #ffffff1a;
+        }
+        .nicknameButtonDiv:hover::after {
+            opacity: 0; 
+            transform: scale(0.1, 1);
+        }
+    }
+
+    .usersActiveList {
+
+        width: 220px;
+        float: left;
+        margin-left: 10px;
+
+        #ListViewUsersHeading {
+            font-family: Helvetica, sans-serif;
+            font-weight: bold;
+            text-align: center;
+            text-transform: uppercase;
+            color: white;
+            font-size: 18px;
+            color: #ffffff;
+            text-shadow: 2px 2px 4px #25323A;
+        }
+
+        .listViewUsers {
+            max-height: 300px;
+            padding: 0;
+            margin: 0;
+            list-style-type: none;
+            background-color: white;
+            overflow-y: scroll;
+            overflow-x: visible;
+        }
+    }
+
+    .LobbyBody {
+        display: flex;
+        min-width: 100%;
+        min-height: 100%;
+        margin: 10px;
+        padding: 20px;
+    }
+
+    #lobbyGreeting {
+        text-align: center;
+        margin-top: 10px;
+        text-transform: capitalize;
+        font-size: 18px;
+        color: #808080b9;
+    }
+
+    .showUsers {
+        width: 300px;
+        height: 100%;
+    }
+
+    .chatroomListDisplay {
+        width: 300px;
+        height: 100%;
+    }
+
+    .chatroomListItemBanned,
+    .chatroomListItem {
+        padding: 10px;
+        border : 3px solid #8080805d;
+        border-radius: 10px;
+        background-color: white;
+        cursor: pointer;
+
+        #chatroomIcon {
+            color: #76F196;
+            float: left;
+            display: flex;
+            font-size: 30px;
+        }
+
+        #chatroomName {
+            font-family: Helvetica, Arial, sans-serif;
+            font-weight: bold;
+            font-size: 14px;
+            color: #25323A;
+            margin-left: 40px;
+            text-transform: uppercase;
+        }
+        #chatroomTopic {
+            font-family: Helvetica, Arial, sans-serif;
+            font-weight: bold;
+            font-size: 9px;
+            color: #25323a5d;
+            margin-left: 40px;
+            text-transform: uppercase;
+        }
+    }
+
+    .chatroomListItemBanned {
+        background-color: #b8b4b4d8;
+        color: darkgray;
+        cursor: auto;
+
+        #youreBanned {
+            color: red;
+            font-style: italic;
+            font-size: 12px;
+        }
+    }
+
+    .chatroomsActiveList {
+        float: left;
+        width: 250px;
+
+        #ListViewChatroomHeading {
+            font-family: Helvetica, sans-serif;
+            font-weight: bold;
+            color: white;
+            font-size: 20px;
+            color: #ffffff;
+            text-align: left;
+            padding-left: 5px;
+            text-shadow: 2px 2px 4px #151c20;
+        }
+
+        .listViewChatroom {
+            max-height: 350px;
+            padding: 0;
+            margin: 0;
+            list-style-type: none;
+            overflow-y: scroll;
+        }
+        #addRoomIcon {
+            float: right;
+            font-size: 25px; 
+            text-align: center;
+            cursor: pointer; 
+            color: #ffffff;
+            text-shadow: 2px 2px 4px #151c20;
+        } 
+        
+        #addRoomToolTip {
+            .toolTipText {
+                font-family: Helvetica, sans-serif;
+                font-weight: bold;
+                visibility: hidden;
+                font-size: 11px;
+                width: 120px;
+                background-color: #000000cb;
+                color: #fff;
+                text-align: center;
+                border-radius: 6px;
+                padding: 10px;
+                margin-left: 50px;
+                margin-top: -18px;
+                position: absolute;
+                z-index: 1;
+                top: 5px;
+                left: 105%;
+            }
+            .toolTipText::after {
+                content: ' ';
+                position: absolute;
+                top: 50%;
+                right: 100%;
+                margin-top: -5px;
+                border-width: 5px;
+                border-style: solid;
+                border-color: transparent #000000cb transparent transparent;
+            }
+        }
+
+        #addRoomToolTip:hover .toolTipText {
+            visibility: visible;
+        }
+
+        #addRoomToolTip {
+            position: relative;
+            display: inline;
+        }
+    }
+
+    #privateMessageToolTip {
+
+
+        #privateMessageIcon {
+            margin-top: 13px;
+            color: #25323A;
+            font-size: 20px;
+        }
+        .toolTipText {
+            font-family: Helvetica, sans-serif;
+            font-weight: bold;
+            visibility: hidden;
+            font-size: 11px;
+            background-color: #000000cb;
+            color: #fff;
+            text-align: center;
+            border-radius: 6px;
+            padding: 7px;
+            margin-left: -50px;
+            margin-top: 5px;
+            position: absolute;
+            z-index: 1;
+            top: 1px;
+            left: 105%;
+        }
+        .toolTipText::after {
+            content: ' ';
+            position: absolute;
+            top: 50%;
+            right: 100%;
+            margin-top: -5px;
+            border-width: 5px;
+            border-style: solid;
+            border-color: transparent #000000cb transparent transparent;
+        }
+    }
+
+    #privateMessageToolTip:hover .toolTipText {
+        visibility: visible;
+        overflow: visible;
+    }
+
+    #privateMessageToolTip {
+        position: relative;
+        display: inline;
+    }
+
+    #chatroomWindow {
+        float: right;
+        height: 460px;
+        width: 80%;
+        margin-left: 30px;
+        margin-right: 30px;
+        background-color: white;
+        border: 0.5px solid #25323a17;
+        border-radius: 5px;
+
+        #windowHeading {
+            margin: 5px;
+            font-family: Helvetica, sans-serif;
+            font-weight: bold;
+            color: white;
+            font-size: 25px;
+            color: #25323a;
+            text-align: center;
+            padding-left: 5px;
+            text-shadow: 1px 1px 2px #6856E2;
+            text-transform: uppercase;
+        }
+
+        #windowTopic {
+            margin: 5px;
+            font-family: Helvetica, sans-serif;
+            font-weight: bold;
+            color: white;
+            font-size: 12px;
+            color: #25323a50;
+            text-align: center;
+            padding-left: 5px;
+            padding-bottom: 10px;
+            text-transform: uppercase;
+            border-bottom: 1px solid #80808086;
+        }
+
+        #userOptions {
+            background-color: #6956e2;
+            width: 220px;
+            border-radius: 20px;
+            color: white;
+            text-shadow: 2px 2px 4px #292727;
+
+            .optionsDescription {
+                font-size: 8px;
+                text-align: center;
+                font-style: italic;
+            }
+        }
+
+        .infoAndUsers {
+            margin: 10px;
+            height: 75%;
+
+            .infoAndChat {
+                height: 100%;
+
+                .roomMessages {
+                    display: inline-block;
+                    max-height: 270px;
+                    overflow-y: scroll;
+                    margin-left: 30px;
+                    margin-left: 20px;
+                    width: 100%;
+
+                    #messageTimeStamp {
+                        display: block;
+                        font-family: Helvetica, sans-serif;
+                        font-style: italic;
+                        color: #413c3c5e;
+                        font-size: 8px;
+                        margin-left: 15px;
+                        text-transform: uppercase;
+                    }
+
+                    #messageTimeStampMe {
+                        display: block;
+                        font-family: Helvetica, sans-serif;
+                        font-style: italic;
+                        color: #413c3c5e;
+                        font-size: 8px;
+                        margin-right: 15px;
+                        text-transform: uppercase;
+                    }
+
+                    #messageSender {
+                        display: inline-block;
+                        font-family: Helvetica, sans-serif;
+                        font-weight: bold;
+                        color: #25323a;
+                        font-size: 14px;
+                        vertical-align: top;
+                    }
+
+                    .meMessages {
+                        min-width: 200px;
+                        max-width: 100%;
+                    }
+                    .messageMeWrap {
+                        right: 0;
+                    }
+
+                    #messageSenderMe {
+                        display: inline-block;
+                        font-family: Helvetica, sans-serif;
+                        font-weight: bold;
+                        color: #0f486b;
+                        font-size: 14px;
+                        vertical-align: top;
+                    }
+
+                    .messageContent {
+                        margin-left: 15px;
+                        margin-top: 2px;
+                        padding: 8px;
+                        display: inline-block;
+                        position: relative; 
+                        max-width: 450px;
+                        min-width: 300px;
+                        height: auto;
+                        background-color: #6856E2;
+                        border-radius: 30px;
+                        -webkit-border-radius: 30px;
+                        -moz-border-radius: 30px;
+                    }
+
+                    .messageContentMe {
+                        margin-right: 15px;
+                        margin-top: 2px;
+                        padding: 8px;
+                        display: inline-block;
+                        position: relative;
+                        text-align: right;
+                        padding-right: 15px;
+                        // max-width: 450px;
+                        // min-width: 50px;
+                        height: auto;
+                        background-color: #f7c65c;
+                        border-radius: 30px;
+                        -webkit-border-radius: 30px;
+                        -moz-border-radius: 30px;
+                    }
+
+                    .messageContentMe:after {
+                        content: ' ';
+                        position: absolute;
+                        margin-right: 10px;
+                        width: 0;
+                        height: 0;
+                        left: auto;
+                        right: -20px;
+                        top: 4px;
+                        bottom: auto;
+                        border: 12px solid;
+                        border-color: #f7c65c transparent transparent #f7c65c;
+                    }
+
+                    .messageContent:after{
+                        content: ' ';
+                        position: absolute;
+                        margin-left: 10px;
+                        width: 0;
+                        height: 0;
+                        left: -20px;
+                        right: auto;
+                        top: 4px;
+                        bottom: auto;
+                        border: 12px solid;
+                        border-color: #6856E2 #6856E2 transparent transparent;
+                    }
+
+                    #messageContent {
+                        font-family: Helvetica, sans-serif;
+                        color: #fdfdfd;
+                        font-size: 14px;
+                        margin-left: 10px;
+                    }
+                }
+            }
+
+            .activeUsersInRoom {
+                height: 100%;
+            }
+
+        }
+        .userChatInput {
+            margin: 10px;
+            width: 98%;
+            height: 80px;
+            border-top: 1px solid #80808086;
+            
+            #messageInput {
+                resize: none;
+                margin-left: 10px;
+                margin-top: 10px;
+            }
+
+            #messageSendButton {
+                margin-top: 15px;
+                font-family: Helvetica, sans-serif;
+                align-content: center;
+                font-weight: bold;
+                text-transform: uppercase;
+                font-size: 14px;
+                color: white;
+                padding: 10px 50px 10px 50px;
+                background: #6856E2;
+                text-shadow: 2px 2px 4px #6e6969;
+                border : 1.5px;
+                border-radius: 20px;
+                box-shadow: 1px 2px 2px 2px rgba(37, 50, 58, 0.651)
+            }
+        }
+    }
+
+    .privateMessageChat {
+        width: 600px;
+        padding: 25px;
+        background-color: white;
+        border : 0.5px solid #25323a17;
+        display: block;
+        margin: 0 auto;
+        margin-top: 100px;
+        padding-bottom: 40px;
+
+        #privateMessages {
+            list-style-type: none;
+        }
+
+        h2, p {
+            padding: 20px;
+        }
+
+        p {
+            font-size: 12px;
+            font-style: italic;
+            text-align: center;
+            color: gray;
+        }
+
+        h2 {
+            text-align: center;
+        }
+
+        input {
+            font-size: 14px;
+            margin-bottom: 20px;
+        }
+
+        #sendButton {
+            width: 90px;
+            font-family: Helvetica, sans-serif;
+            align-content: center;
+            font-weight: bold;
+            font-size: 12px;
+            color: #25323A;
+            padding: 5px 10px 5px 10px;
+            background: #46797986;
+            text-shadow: 2px 2px 4px #6e6969;
+            border : 1px;
+            border-radius: 10px;
+            box-shadow: 1px 2px 2px 2px rgba(37, 50, 58, 0.651)
+        }
+
+        #exitButton {
+            display: block;
+            margin: 0 auto;
+            font-family: Helvetica, sans-serif;
+            align-content: center;
+            font-weight: bold;
+            font-size: 14px;
+            color: white;
+            padding: 10px 50px 10px 50px;
+            background: #6856E2;
+            text-shadow: 2px 2px 4px #6e6969;
+            border : 1.5px;
+            border-radius: 20px;
+            box-shadow: 1px 2px 2px 2px rgba(37, 50, 58, 0.651)
+        }
+
+        .messagesPrivateChat {
+            height: 200px;
+            overflow-y: scroll;
+            background-color: #6956e22c;
+            margin: 10px;
+            padding: 2px;
+            font-size: 16px;
+            color: #25323a;
+        }
+    }
+
+    .addChatroomPrompt {
+        width: 600px;
+        padding: 25px;
+        background-color: white;
+        border : 0.5px solid #25323a17;
+        display: block;
+        margin: 0 auto;
+        margin-top: 100px;
+        padding-bottom: 40px;
+
+        h1, p {
+            padding: 20px;
+        }
+
+        h1 {
+            text-align: center;
+        }
+
+        input {
+            font-size: 14px;
+            margin-bottom: 20px;
+            margin-left: 20px;
+            margin-right: 40px;
+        }
+
+        button {
+            display: block;
+            margin: 0 auto;
+            margin-top: 20px;
+            font-family: Helvetica, sans-serif;
+            align-content: center;
+            font-weight: bold;
+            font-size: 14px;
+            color: white;
+            padding: 10px 50px 10px 50px;
+            background: #6856E2;
+            text-shadow: 2px 2px 4px #6e6969;
+            border : 1.5px;
+            border-radius: 20px;
+            box-shadow: 1px 2px 2px 2px rgba(37, 50, 58, 0.651)
+        }
+    }
+
+    .userListItem {
+
+        position: relative;
+        padding: 10px;
+        border: gray;
+        width: 230px;
+        border : 0.5px solid #25323a17;
+        background-color: white;
+        overflow-x: visible;
+
+        #onlineIcon {
+            color: #76F196;
+            float: left;
+            display: flex;
+            font-size: 20px;
+            margin-top: 10px; 
+        }
+
+        #userName {
+            font-family: Helvetica, Arial, sans-serif;
+            font-weight: bold;
+            font-size: 16px;
+            color: #25323A;
+            margin-top: 10px;
+            margin-left: 30px;
+        }
+    }
+
+    @-moz-keyframes spin {
+        from { -moz-transform: rotate(0deg); }
+        to { -moz-transform: rotate(360deg); }
+    }
+    @-webkit-keyframes spin {
+        from { -webkit-transform: rotate(0deg); }
+        to { -webkit-transform: rotate(360deg); }
+    }
+    @keyframes spin {
+        from {transform:rotate(0deg);}
+        to {transform:rotate(360deg);}
+    }
+}
